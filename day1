@@ -1,0 +1,36 @@
+1.
+names = ["john", "jake", "jack", "george", "jenny", "jason"]
+for name in names:
+    if len(name) < 5 and "e" not in name:
+      print(name)
+      
+2.
+print("\n")
+name = "python"
+print("c" + name[1:])
+
+3.
+dicValues = {"name": "python", "ext": "py", "creator": "guido"}
+for key, values in dicValues.items():
+    print('Key is : ' +key + ' and Value is : ' +values)
+    
+4.
+for n in range(1,51):
+    if n % 3 == 0 and n % 5 == 0:
+        print("fizzbuzz")
+    elif n % 3 == 0:
+        print("fizz")
+    elif n % 5 == 0:
+        print("buzz")
+    else:
+        print(n)
+        
+ 5.
+ guess = input("Enter your Guess Number :")
+ num = 10
+ if int(guess) == num:
+    print("Correct")
+ elif int(guess) > num:
+    print("Greater")
+ else:
+    print("Lesser")
