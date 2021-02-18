@@ -1,0 +1,90 @@
+
+
+1.
+
+number = 50
+count = 0
+guess=int(input("Enter the number:"))
+while count<3:
+	if guess<number:
+		print("Lesser")
+	elif guess>number:
+		print("Greater")
+	else:
+		print("Guessed the right number")
+		break
+	if count<2:
+		guess=int(input("Enter the number:"))
+		count = count+1   
+	else:
+		print("Finished)
+				
+2.
+
+numlist = ['a','b','c','d']
+for index,name in enumerate(numlist):
+    print(f"{index}. {name}")
+	
+3.
+
+fruitDict = {'apple': 'red', 'grapes': 'purple', 'mango': 'green','pineapple':'yellow'}
+for key, value in fruitDict.items():
+    print(key, value)
+		
+4.
+
+c=1
+while c<=10:
+ num=int(input("Enter the value:"))
+    if num%2==0:
+        print("even")
+    else:
+        print("odd")
+    c=c+1
+else:
+    print("Finished")
+	
+	
+5.
+
+def add(num1: int, num2: int) -> int:
+    '''Add two numbers'''
+    sum = num1 + num2
+    return sum
+print(add(2, 3))
+
+
+a = int(input("Enter a number: "))
+b = int(input("Enter another number: "))
+print(add.__doc__)
+print(add(a, b))
+
+6.
+
+def cars(*args):
+    for value in args:
+        print(value)
+cars("Honda","Toyotta","Ford","Benz")
+
+7.
+
+def get_kwargs(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key} : {value}")
+get_kwargs(a="1",b="2",c="3")
+
+8.
+
+def get_count(*args, **kwargs):
+    print(f'Args Count:' {len(args)})
+    printf(f'Kwargs Count:' {len(kwargs)})
+	
+get_count('a','b','c',k1="apple",k2="ford",k3="key")
+
+13.
+
+t=int(input("Total : "))
+c=int(input("Count : "))
+avg = lambda t, c : t /c
+print(f"Average : {avg(t,c)}")
+
