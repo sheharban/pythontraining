@@ -1,0 +1,68 @@
+1.
+
+list = [1,2,3]
+dictvalues = {key:key**2 for key in list }
+print(dictvalues)
+listcomp =[key for key in dictvalues.values()]
+print(listcomp)
+
+2.
+
+list =[1, 2, 5, 2, 3, 1, 4, 5]
+compreh= {value**2 for value in set(list)}
+print(compreh) 
+
+3.
+
+empList = [("Guido", 2000, 500), ("Raymond", -52, 1000), ("Jack", 900, 1000), ("Brandon", 2000, 0)]
+
+
+
+"""Set of all balances """
+
+balances = {curbalance for (name, curbalance, minbalance) in empList}
+print(balances)
+
+
+
+""" list of account holders """
+
+accountholders = [name for (name, curbalance, minbalance) in empList]
+print(accountholders)
+
+
+
+""" dict of user and money each need to fulfill the min balance requirement  """
+
+min_balancereq = {name : minbal-curbal for (name, curbal, minbal) in empList if curbal < minbal}
+print(min_balancereq)
+
+
+
+""" list of tuples with name and current balance if the balance is above 0 """
+
+curbalList = [(name, curbal) for (name, curbal, minbal) in empList if curbal > 0]
+print(curbalList)
+
+5.
+
+import math
+
+L = [1, 2, 3, 4, 5, 6]
+class Factorl:
+    def factorial(self, fact):
+         for num in fact:
+            print(math.factorial(num))
+fact = Factorl()
+fact.factorial(L)
+
+
+6.
+
+from ImportProgram import ImpFunction
+ImpFunction()
+
+7.
+
+from ImportProgram import ImpFunction as newImpFunction
+newImpFunction()
