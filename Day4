@@ -1,0 +1,71 @@
+1.
+
+class Iterator:
+    def __init__(self,data):
+        self.data = data
+        self.index = -2
+    def __iter__(self):
+        return self
+    def __next__(self,it):
+        if self.index  < len(self.data)-2:
+            self.index = self.index + 2
+            return self.data[self.index]
+        else:
+            raise StopIteration 
+			
+			'''  
+
+iterator = Iterator("Python")
+it = iterator.__iter__()
+print(iterator.__next__(it))
+print(iterator.__next__(it))
+print(iterator.__next__(it))
+print(iterator.__next__(it))
+
+'''
+
+2.
+
+with open('names.csv', newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+	for row in reader:
+		print(row['name'], row['exp'])
+		
+		
+		
+		
+3.
+
+import os
+directory = 'C:\Users\409326\Desktop\Python'
+for filename in os.listdir(directory):
+    if filename.endswith(".py"): 
+         print(os.path.join(directory, filename))
+		 
+		 
+4.
+
+import sys 
+  
+print("name of the program:", sys.argv[0])
+print("Argument List:", str(sys.argv))
+
+
+6.
+
+while True:
+    try:
+        n = input("Please enter an integer: ")
+        n = int(n)
+        break
+    except ValueError:
+        print("No valid integer! Please try again ...")
+print("You entered an integer!")
+
+7.
+
+ages = {'Jim': 30, 'Pam': 28, 'Kevin': 33}
+person = input('Get age for: ')
+print(f'{person} is {ages[person]} years old.')
+		
+		
