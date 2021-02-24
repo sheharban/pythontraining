@@ -1,0 +1,28 @@
+1.
+
+def GenerateSquare(nums):   
+    for num in nums:
+        yield num**2
+		
+Result=GenerateSquare([1,2,3,4])
+print(Result)
+print(next(Result))
+print(next(Result))
+print(next(Result))
+print(next(Result))
+
+2.
+
+class SumList(object):
+	def __init__(self, num1):
+		self.num1 = num1
+
+	def __iadd__(self, other):
+		retval = sum(self.num1) + sum(other.num1)
+		return retval
+
+list1 = SumList([10, 20, 30, 40, 50])
+list2 = SumList([20, 40, 60, 80, 100])
+
+list1 += list2
+print(list1)
